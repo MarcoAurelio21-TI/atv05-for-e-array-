@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 05 - Playlist com FOR</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+
+  <h1>Mostrando a playlist</h1>
+  <p>Clique no botão para rodar o código.</p>
+  
+  <button onclick="mostrarPlaylist()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+    Rodar Código
+  </button>
+  <div id="resultado" style="margin-top: 20px; font-size: 18px; line-height: 1.6;"></div>
+
+  <script>
+    function mostrarPlaylist() {
+      let div = document.getElementById("resultado");
+      div.innerHTML = ""; 
+      let musicas = ["Evidências", "Garota de Ipanema", "Bohemian Rhapsody", "Trem-Bala"];
+      div.innerHTML += "<h2>Minha playlist</h2>";
+      for (let i = 0; i < musicas.length; i++) {
+        div.innerHTML += (i + 1) + ". " + musicas[i] + "<br>";
+      }
+      div.innerHTML += "<p><strong>Total: " + musicas.length + " músicas</strong></p>";
+    }
+  </script>
+
+</body>
+</html>
